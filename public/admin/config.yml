@@ -1,0 +1,57 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: public/img/uploads
+public_path: /img/uploads
+
+collections:
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - file: "content/homepage.md"
+        label: "Homepage Settings"
+        name: "homepage"
+        fields:
+          - { label: "Company Description", name: "company_desc", widget: "text" }
+          - { label: "Map Iframe URL", name: "map_url", widget: "string" }
+          - { label: "About Us", name: "about_us", widget: "markdown" }
+
+  - name: "locations"
+    label: "Locations"
+    files:
+      - file: "content/locations.md"
+        label: "Office Locations"
+        name: "locations"
+        fields:
+          - label: "Locations"
+            name: "locations"
+            widget: "list"
+            fields:
+              - { label: "City", name: "city", widget: "string" }
+              - { label: "Address", name: "address", widget: "text" }
+
+  - name: "woods"
+    label: "Wood Types"
+    folder: "content/woods"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image", media_library: { max_file_size: 5000000 } }
+      - { label: "Offer", name: "offer", widget: "string", required: false }
+      - { label: "Price", name: "price", widget: "string" }
+      - { label: "Availability", name: "availability", widget: "string" }
+      - { label: "Order", name: "order", widget: "number" }
+
+  - name: "contacts"
+    label: "Contact People"
+    folder: "content/contacts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Name", name: "title", widget: "string" }
+      - { label: "Position", name: "position", widget: "string" }
+      - { label: "Email", name: "email", widget: "string" }
+      - { label: "Phone", name: "phone", widget: "string" }
+      - { label: "Order", name: "order", widget: "number" }
