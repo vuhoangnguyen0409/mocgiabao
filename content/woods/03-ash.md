@@ -1,8 +1,8 @@
 ---
 title: ASH
-image: /img/uploads/wood-ash.jpg
+image: /public/img/uploads/ivory-flow-13.jpg
 offer: ""
 price: "VND: Liên hệ"
-availability: "Tạm Hết"
+availability: Tạm Hết
 order: 3
 ---
