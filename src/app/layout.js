@@ -1,4 +1,5 @@
 import Script from "next/script";
+import RevealHandler from "@/components/RevealHandler";
 import "./globals.css";
 
 export const metadata = {
@@ -23,9 +24,9 @@ export default function RootLayout({ children }) {
         {children}
         <Script
           src="/tooplate-ivory-script.js"
-          strategy="lazyOnload"
-          onLoad={() => console.log('[Layout] Reveal script loaded')}
+          strategy="afterInteractive"
         />
+        <RevealHandler />
         <Script
           src="https://identity.netlify.com/v1/netlify-identity-widget.js"
           strategy="afterInteractive"
