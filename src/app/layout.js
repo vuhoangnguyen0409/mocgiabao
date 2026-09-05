@@ -21,7 +21,11 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         {children}
-        <script src="/tooplate-ivory-script.js"></script>
+        <Script
+          src="/tooplate-ivory-script.js"
+          strategy="lazyOnload"
+          onLoad={() => console.log('[Layout] Reveal script loaded')}
+        />
         <Script
           src="https://identity.netlify.com/v1/netlify-identity-widget.js"
           strategy="afterInteractive"
