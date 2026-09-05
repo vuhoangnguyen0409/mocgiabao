@@ -4,11 +4,38 @@ Your site is now live with Decap CMS. Here's how to add and edit content.
 
 ---
 
+## First Time Setup: Enable Netlify Identity
+
+**Before accessing the CMS, you must enable Identity on Netlify:**
+
+### Step 1: Enable Identity Service
+1. Go to [app.netlify.com](https://app.netlify.com)
+2. Click your site name (mocgiabao)
+3. Go to **Project settings** → **Identity** (left sidebar)
+4. Click **Enable Identity**
+5. Under **Registration**, set to **Invite only**
+
+### Step 2: Enable Git Gateway
+1. On the same **Identity** page, scroll to **Services** section
+2. Click **Enable Git Gateway**
+3. Authorize GitHub if prompted (use your GitHub account)
+
+### Step 3: Invite Yourself
+1. On **Identity** page → click **Users** tab
+2. Click **Invite user**
+3. Enter your email address
+4. Check your email for invite link
+5. Click the link in the email
+6. Set your password
+7. You're now invited to the CMS!
+
+---
+
 ## Accessing the CMS
 
 1. Go to `https://YOUR_SITE.netlify.app/admin`
    - Example: `https://mocgiabao.netlify.app/admin`
-2. Log in with your email and password (or GitHub if you set it up)
+2. Log in with your email and password (the one you set in Step 3 above)
 3. You'll see collections on the left sidebar
 
 ---
