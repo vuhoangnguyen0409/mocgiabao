@@ -9,13 +9,18 @@ https://www.tooplate.com/view/2166-ivory-flow
 function initializeReveal() {
   'use strict';
 
+  console.log('[Reveal] Initializing...');
+
   /* ── IntersectionObserver — Scroll Reveal ── */
   var revealEls = document.querySelectorAll('.reveal');
+  console.log('[Reveal] Found', revealEls.length, 'elements with .reveal class');
 
   if ('IntersectionObserver' in window) {
+    console.log('[Reveal] Using IntersectionObserver');
     var revealObs = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
+          console.log('[Reveal] Element visible:', entry.target.className);
           entry.target.classList.add('visible');
           revealObs.unobserve(entry.target);
         }
@@ -26,8 +31,10 @@ function initializeReveal() {
 
     /* 500ms safety fallback for elements in viewport */
     setTimeout(function() {
+      console.log('[Reveal] Running 500ms fallback');
       revealEls.forEach(function(el) {
         if (!el.classList.contains('visible')) {
+          console.log('[Reveal] Adding visible class to:', el.className);
           el.classList.add('visible');
         }
       });
