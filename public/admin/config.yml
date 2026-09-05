@@ -2,6 +2,10 @@ backend:
   name: github
   repo: vuhoangnguyen0409/mocgiabao
   branch: main
+  auth_type: github_app
+  app_id: YOUR_GITHUB_CLIENT_ID
+  base_url: https://api.github.com
+  auth_endpoint: /login/oauth/authorize
 
 # NOTE: media_folder is where files are stored in git (relative to repo root)
 # public_path is the URL path in markdown files (must NOT include /public/)
