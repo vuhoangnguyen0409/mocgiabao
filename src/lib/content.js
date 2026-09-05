@@ -13,7 +13,7 @@ function readMarkdownDir(dirName) {
       const slug = file.replace(/\.md$/, "");
       const raw = fs.readFileSync(path.join(dirPath, file), "utf8");
       const { data, content } = matter(raw);
-      return { slug, ...data, content };
+      return { slug, ...fixImagePaths(data), content };
     })
     .sort((a, b) => (a.order || 0) - (b.order || 0));
 }
@@ -22,7 +22,16 @@ function readMarkdownFile(fileName) {
   const filePath = path.join(CONTENT_DIR, fileName);
   const raw = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(raw);
-  return { ...data, content };
+  return { ...fixImagePaths(data), content };
+}
+
+function fixImagePaths(data) {
+  const fixed = { ...data };
+  // Strip /public/ prefix from image paths (Decap CMS bug workaround)
+  if (fixed.image && typeof fixed.image === 'string') {
+    fixed.image = fixed.image.replace(/^\/public\//, '/');
+  }
+  return fixed;
 }
 
 export function getHomepageData() {
