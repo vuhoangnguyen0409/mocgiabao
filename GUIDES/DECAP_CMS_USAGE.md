@@ -212,6 +212,7 @@ Manages the 2 people shown in the signature/contact section.
 
 | Issue | Solution |
 |-------|----------|
+| **"Your Git Gateway backend is not returning valid settings"** | **Git Gateway not enabled!** Go to Netlify → Project settings → Identity → Services → Enable Git Gateway. Both Identity AND Git Gateway must be enabled. Hard refresh `/admin` after enabling. |
 | "Login failed" | Check email/password. If forgot password, Netlify should send reset link |
 | "Image won't upload" | File too large (max 5MB) or unsupported format. Try JPG or PNG |
 | "Changes not appearing" | Wait 1-2 min for Netlify deploy. Hard refresh (Ctrl+Shift+R) browser |
