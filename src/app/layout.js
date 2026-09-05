@@ -27,19 +27,6 @@ export default function RootLayout({ children }) {
           strategy="afterInteractive"
         />
         <RevealHandler />
-        <Script
-          src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-          strategy="afterInteractive"
-        />
-        <Script id="netlify-identity-redirect" strategy="afterInteractive">
-          {`
-            if (window.netlifyIdentity) {
-              window.netlifyIdentity.on("login", () => {
-                document.location.href = "/admin/";
-              });
-            }
-          `}
-        </Script>
       </body>
     </html>
   );
