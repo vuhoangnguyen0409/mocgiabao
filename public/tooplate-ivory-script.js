@@ -1,12 +1,12 @@
 /* JavaScript Document
 
 Tooplate 2166 Ivory Flow
-    
+
 https://www.tooplate.com/view/2166-ivory-flow
 
 */
 
-(function() {
+function initializeReveal() {
   'use strict';
 
   /* ── IntersectionObserver — Scroll Reveal ── */
@@ -244,5 +244,16 @@ https://www.tooplate.com/view/2166-ivory-flow
       }
     });
   });
+}
 
-})();
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initializeReveal);
+} else {
+  initializeReveal();
+}
+
+document.addEventListener('visibilitychange', function() {
+  if (document.visibilityState === 'visible') {
+    initializeReveal();
+  }
+});
