@@ -24,10 +24,14 @@ function initializeReveal() {
 
     revealEls.forEach(function(el) { revealObs.observe(el); });
 
-    /* 3-second safety fallback for iframe previews */
+    /* 500ms safety fallback for elements in viewport */
     setTimeout(function() {
-      revealEls.forEach(function(el) { el.classList.add('visible'); });
-    }, 3000);
+      revealEls.forEach(function(el) {
+        if (!el.classList.contains('visible')) {
+          el.classList.add('visible');
+        }
+      });
+    }, 500);
   } else {
     revealEls.forEach(function(el) { el.classList.add('visible'); });
   }
@@ -49,8 +53,12 @@ function initializeReveal() {
     timelineItems.forEach(function(el) { timelineObs.observe(el); });
 
     setTimeout(function() {
-      timelineItems.forEach(function(el) { el.classList.add('in-view'); });
-    }, 3000);
+      timelineItems.forEach(function(el) {
+        if (!el.classList.contains('in-view')) {
+          el.classList.add('in-view');
+        }
+      });
+    }, 500);
   } else {
     timelineItems.forEach(function(el) { el.classList.add('in-view'); });
   }
