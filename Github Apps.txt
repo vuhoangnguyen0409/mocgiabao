@@ -1,0 +1,4 @@
+Vercel - GitHub Apps
+App ID: 4846358
+Client ID: Iv23liNVgo3Ldtr26ZkX
+Client secrets: 3b9a7352508d8e1ebb68f2561e0db423a03e0261

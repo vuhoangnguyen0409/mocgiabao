@@ -1,3 +1,0 @@
-Vercel
-Client ID: Ov23liyp0zSaFSuNz6Ou
-Client secrets: 77e38042ab5503af4b503e9b43f53510cc208242
