@@ -3,7 +3,7 @@ backend:
   repo: vuhoangnguyen0409/mocgiabao
   branch: main
   auth_type: github_app
-  app_id: Ov23li3SaIGbYsTZngRC
+  app_id: Ov23liyp0zSaFSuNz6Ou
   base_url: https://api.github.com
   auth_endpoint: /login/oauth/authorize
 
