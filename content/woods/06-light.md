@@ -1,8 +1,8 @@
 ---
 title: Light
-image: /img/uploads/ivory-flow-16.jpg
+image: /img/uploads/ivory-flow-12.jpg
 offer: ""
-price: "€540"
-availability: "Available"
+price: €555
+availability: Available
 order: 6
 ---

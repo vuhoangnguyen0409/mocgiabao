@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: vuhoangnguyen0409/mocgiabao
-  branch: main
+  branch: vercel
   base_url: https://mocgiabao.vercel.app
   auth_endpoint: api/auth
 
