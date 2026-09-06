@@ -343,7 +343,7 @@ img { display: block; max-width: 100%; height: auto; }
 .lookbook-card-meta {
   position: absolute;
   right: 0;
-  bottom: -45px;
+  bottom: -70px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -387,7 +387,7 @@ img { display: block; max-width: 100%; height: auto; }
 
 .lookbook-card-label {
   position: absolute;
-  bottom: -82px;
+  bottom: -120px;
   left: 10px;
   font-family: 'DM Mono', monospace;
   font-size: 15px;
@@ -1013,7 +1013,7 @@ img { display: block; max-width: 100%; height: auto; }
 
   .lookbook { padding: 48px 0; }
   .lookbook-header { padding: 0 24px; margin-bottom: 28px; }
-  .lookbook-track { padding: 60px 24px 96px; gap: 16px; }
+  .lookbook-track { padding: 40px 24px 126px; gap: 16px; }
   .lookbook-card img { height: 45vh; min-height: 260px; border-radius: 24px; border-width: 6px; }
   .lookbook-footer { padding: 0 24px; }
 
@@ -1036,4 +1036,9 @@ img { display: block; max-width: 100%; height: auto; }
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
   }
+}
+
+@media (min-width: 1600px) {
+  .lookbook-card-meta { bottom: -45px; }
+  .lookbook-card-label { bottom: -82px; }
 }
