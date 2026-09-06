@@ -5,6 +5,7 @@ backend:
   auth_type: github_app
   app_id: 4846358
   client_id: Iv23liNVgo3Ldtr26ZkX
+  auth_host: github.com
   base_url: https://api.github.com
   auth_endpoint: /login/oauth/authorize
 
