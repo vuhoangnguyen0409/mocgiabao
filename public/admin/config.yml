@@ -1,13 +1,16 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: vuhoangnguyen0409/mocgiabao
   branch: main
+  auth_type: github_app
+  app_id: Ov23li3SaIGbYsTZngRC
+  base_url: https://api.github.com
+  auth_endpoint: /login/oauth/authorize
 
-# Image uploads configuration
-# media_folder: physical location in git repo (relative to repo root)
-# public_path: URL path shown in markdown (served by Next.js from /public/)
+# NOTE: media_folder is where files are stored in git (relative to repo root)
+# public_path is the URL path in markdown files (must NOT include /public/)
 media_folder: public/img/uploads
 public_path: /img/uploads
-site_url: https://mocbaogia.netlify.app
 
 collections:
   - name: "homepage"
